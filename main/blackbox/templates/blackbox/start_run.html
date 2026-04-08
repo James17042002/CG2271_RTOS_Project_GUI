@@ -1,0 +1,82 @@
+{% extends "blackbox/base.html" %}
+
+{% block title %}Start a Run - BlackBox{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-5">
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h3 class="card-title h5 mb-4">Start Tracking Your Good!</h3>
+                <form method="POST" action="{% url 'toggle_run' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="object_name" class="form-label">Enter Object Name:</label>
+                        <input type="text" name="object_name" id="object_name" class="form-control"
+                            value="{{ active_run.object|default:'' }}" {% if active_run %}disabled{% endif %} required>
+                    </div>
+                    {% if active_run %}
+                    <button type="submit" class="btn btn-danger w-100">Stop Run</button>
+                    {% else %}
+                    <button type="submit" class="btn btn-success w-100">Start</button>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+
+        {% if active_run %}
+        <div class="alert alert-info shadow-sm">
+            <div class="d-flex align-items-center">
+                <div class="spinner-grow spinner-grow-sm text-info me-3" role="status"></div>
+                <strong>BlackBox Active: Run #{{ active_run.id }} - {{ active_run.object }}</strong>
+            </div>
+            <small class="text-muted d-block mt-2">Started at: {{ active_run.started_at|date:"M d, Y H:i" }}</small>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="col-md-7">
+        <div class="card shadow-sm h-100">
+            <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Recent Sensor Readings</h5>
+                {% if active_run %}
+                <span class="badge bg-success">Live Polling Active</span>
+                {% endif %}
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light sticky-top">
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Temp</th>
+                                <th>Hum</th>
+                                <th>Light</th>
+                                <th>Event</th>
+                            </tr>
+                        </thead>
+                        <tbody id="readings-body" {% if active_run %} hx-get="{% url 'live_readings' %}"
+                            hx-trigger="every 5s, load" hx-swap="innerHTML" {% endif %}>
+                            {% if not active_run %}
+                            <tr>
+                                <td colspan="5" class="text-center py-5 text-muted">
+                                    <i class="bi bi-info-circle me-2"></i> No active run
+                                </td>
+                            </tr>
+                            {% else %}
+                            <!-- Polling will populate this -->
+                            <tr>
+                                <td colspan="5" class="text-center py-5">
+                                    <div class="spinner-border spinner-border-sm text-primary me-2"></div>
+                                    Fetching latest readings...
+                                </td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,207 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6" pages="5">
+  <diagram id="NsUGTeqrzkPE7nmLwdtJ" name="Base.html">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZDw5xva-LFBuW2Iuf5_6-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="520" width="850" x="90" y="256.52" as="geometry" />
+        </mxCell>
+        <mxCell id="ZDw5xva-LFBuW2Iuf5_6-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="850" x="90" y="256.52" as="geometry" />
+        </mxCell>
+        <mxCell id="ZDw5xva-LFBuW2Iuf5_6-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=22;" value="BlackBox" vertex="1">
+          <mxGeometry height="40" width="80" x="114" y="266.52" as="geometry" />
+        </mxCell>
+        <mxCell id="ZDw5xva-LFBuW2Iuf5_6-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Track your sensitive goods....." vertex="1">
+          <mxGeometry height="30" width="220" x="180" y="276.52" as="geometry" />
+        </mxCell>
+        <mxCell id="ZDw5xva-LFBuW2Iuf5_6-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Home" vertex="1">
+          <mxGeometry height="30" width="60" x="650" y="276.52" as="geometry" />
+        </mxCell>
+        <mxCell id="ZDw5xva-LFBuW2Iuf5_6-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Runs" vertex="1">
+          <mxGeometry height="30" width="60" x="730" y="276.52" as="geometry" />
+        </mxCell>
+        <mxCell id="ZDw5xva-LFBuW2Iuf5_6-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Start a Run" vertex="1">
+          <mxGeometry height="45" width="100" x="820" y="266.52" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="RosxhhsKnOtuFhNU9P1A" name="Home">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2y0LL1dFIy_XXtQV4w3I-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Just a brief description on my website will do" vertex="1">
+          <mxGeometry height="520" width="850" x="140" y="356.52" as="geometry" />
+        </mxCell>
+        <mxCell id="2y0LL1dFIy_XXtQV4w3I-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="850" x="140" y="356.52" as="geometry" />
+        </mxCell>
+        <mxCell id="2y0LL1dFIy_XXtQV4w3I-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=22;" value="BlackBox" vertex="1">
+          <mxGeometry height="40" width="80" x="164" y="366.52" as="geometry" />
+        </mxCell>
+        <mxCell id="2y0LL1dFIy_XXtQV4w3I-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Track your sensitive goods....." vertex="1">
+          <mxGeometry height="30" width="220" x="230" y="376.52" as="geometry" />
+        </mxCell>
+        <mxCell id="2y0LL1dFIy_XXtQV4w3I-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Home" vertex="1">
+          <mxGeometry height="30" width="60" x="700" y="376.52" as="geometry" />
+        </mxCell>
+        <mxCell id="2y0LL1dFIy_XXtQV4w3I-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Runs" vertex="1">
+          <mxGeometry height="30" width="60" x="780" y="376.52" as="geometry" />
+        </mxCell>
+        <mxCell id="2y0LL1dFIy_XXtQV4w3I-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Start a Run" vertex="1">
+          <mxGeometry height="45" width="100" x="870" y="366.52" as="geometry" />
+        </mxCell>
+        <mxCell id="2y0LL1dFIy_XXtQV4w3I-8" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.649;entryY=-0.058;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="729.85" y="300" as="sourcePoint" />
+            <mxPoint x="729.5000000000001" y="356.52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Run List" id="lhJatKsJbmzNBRJPn58U">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GqGZrY-dW_3mwD5cUpTW-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="520" width="850" x="90" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="GqGZrY-dW_3mwD5cUpTW-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="850" x="90" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="GqGZrY-dW_3mwD5cUpTW-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=22;" value="BlackBox" vertex="1">
+          <mxGeometry height="40" width="80" x="114" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GqGZrY-dW_3mwD5cUpTW-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Track your sensitive goods....." vertex="1">
+          <mxGeometry height="30" width="220" x="180" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GqGZrY-dW_3mwD5cUpTW-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Home" vertex="1">
+          <mxGeometry height="30" width="60" x="650" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GqGZrY-dW_3mwD5cUpTW-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Runs" vertex="1">
+          <mxGeometry height="30" width="60" x="730" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GqGZrY-dW_3mwD5cUpTW-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Start a Run" vertex="1">
+          <mxGeometry height="45" width="100" x="820" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GqGZrY-dW_3mwD5cUpTW-9" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.649;entryY=-0.058;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="759.85" y="63.48" as="sourcePoint" />
+            <mxPoint x="759.5000000000001" y="119.99999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SFS2IdlBOb3UkTxzKYYI-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="(Filter Accordion, filter by timestamp, object) (Django Filters)" vertex="1">
+          <mxGeometry height="40" width="800" x="110" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="SFS2IdlBOb3UkTxzKYYI-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Django Tables, List of Runs. Click Run to go to run details" vertex="1">
+          <mxGeometry height="380" width="790" x="110" y="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="jL3VABxQruPHGyIHKAiS" name="Run Details">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OQ7thUXSSdhcgmHc9XHE-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="757.48" width="850" x="170" y="352.52" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ7thUXSSdhcgmHc9XHE-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="850" x="170" y="352.52" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ7thUXSSdhcgmHc9XHE-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=22;" value="BlackBox" vertex="1">
+          <mxGeometry height="40" width="80" x="194" y="362.52" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ7thUXSSdhcgmHc9XHE-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Track your sensitive goods....." vertex="1">
+          <mxGeometry height="30" width="220" x="260" y="372.52" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ7thUXSSdhcgmHc9XHE-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Home" vertex="1">
+          <mxGeometry height="30" width="60" x="730" y="372.52" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ7thUXSSdhcgmHc9XHE-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Runs" vertex="1">
+          <mxGeometry height="30" width="60" x="810" y="372.52" as="geometry" />
+        </mxCell>
+        <mxCell id="OQ7thUXSSdhcgmHc9XHE-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Start a Run" vertex="1">
+          <mxGeometry height="45" width="100" x="900" y="362.52" as="geometry" />
+        </mxCell>
+        <mxCell id="9XW8hUl5BHoIjgX4aDf2-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="Run number - Run Object name" vertex="1">
+          <mxGeometry height="47.48" width="250" x="170" y="412.52" as="geometry" />
+        </mxCell>
+        <mxCell id="9XW8hUl5BHoIjgX4aDf2-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Light Graph" vertex="1">
+          <mxGeometry height="210" width="360" x="200" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="9XW8hUl5BHoIjgX4aDf2-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Temp Graph" vertex="1">
+          <mxGeometry height="210" width="360" x="630" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="9XW8hUl5BHoIjgX4aDf2-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Humidity Graph" vertex="1">
+          <mxGeometry height="210" width="360" x="200" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="9XW8hUl5BHoIjgX4aDf2-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Location Tracking" vertex="1">
+          <mxGeometry height="210" width="360" x="630" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="9XW8hUl5BHoIjgX4aDf2-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="A simple html striped table with details such as Avg temp, avg humidity, avg light, No of Lid openings, No of Impacts&amp;nbsp;" vertex="1">
+          <mxGeometry height="120" width="790" x="200" y="450" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="IPTZbQiuf4g7AcH4LhbL" name="StartRun">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pRImbPmb4Uzfbv_YBGvu-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="520" width="850" x="70" y="486.52" as="geometry" />
+        </mxCell>
+        <mxCell id="pRImbPmb4Uzfbv_YBGvu-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="850" x="70" y="486.52" as="geometry" />
+        </mxCell>
+        <mxCell id="pRImbPmb4Uzfbv_YBGvu-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=22;" value="BlackBox" vertex="1">
+          <mxGeometry height="40" width="80" x="94" y="496.52" as="geometry" />
+        </mxCell>
+        <mxCell id="pRImbPmb4Uzfbv_YBGvu-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Track your sensitive goods....." vertex="1">
+          <mxGeometry height="30" width="220" x="160" y="506.52" as="geometry" />
+        </mxCell>
+        <mxCell id="pRImbPmb4Uzfbv_YBGvu-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Home" vertex="1">
+          <mxGeometry height="30" width="60" x="630" y="506.52" as="geometry" />
+        </mxCell>
+        <mxCell id="pRImbPmb4Uzfbv_YBGvu-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Runs" vertex="1">
+          <mxGeometry height="30" width="60" x="710" y="506.52" as="geometry" />
+        </mxCell>
+        <mxCell id="pRImbPmb4Uzfbv_YBGvu-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Start a Run" vertex="1">
+          <mxGeometry height="45" width="100" x="800" y="496.52" as="geometry" />
+        </mxCell>
+        <mxCell id="pRImbPmb4Uzfbv_YBGvu-8" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.649;entryY=-0.058;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="849.85" y="430" as="sourcePoint" />
+            <mxPoint x="849.5000000000001" y="486.52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HSO5d6zlEaBp8UoVvpRI-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="Start Tracking Your Good!" vertex="1">
+          <mxGeometry height="30" width="196" x="74" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="HSO5d6zlEaBp8UoVvpRI-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="35" width="110" x="210" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="HSO5d6zlEaBp8UoVvpRI-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Enter Object Name:" vertex="1">
+          <mxGeometry height="30" width="116" x="74" y="602.5" as="geometry" />
+        </mxCell>
+        <mxCell id="HSO5d6zlEaBp8UoVvpRI-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Start" vertex="1">
+          <mxGeometry height="27.5" width="66" x="354" y="607.5" as="geometry" />
+        </mxCell>
+        <mxCell id="HSO5d6zlEaBp8UoVvpRI-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="BlackBox Active: Run 12 - Medication" vertex="1">
+          <mxGeometry height="40" width="320" x="70" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="HSO5d6zlEaBp8UoVvpRI-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="A real-time scrollable table using htmx, recent sensor readings on top.&amp;nbsp;" vertex="1">
+          <mxGeometry height="250" width="448" x="120" y="720" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
