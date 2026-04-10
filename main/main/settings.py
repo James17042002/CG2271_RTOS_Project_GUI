@@ -10,7 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import base64
+import json
+import os
+import tempfile
 from pathlib import Path
+
+import dj_database_url
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-2*i07ttf&sxye5ut1_0+ia)!39n#==oa#*f3#!hsgc9#xs-_$w"
+SECRET_KEY = config('SECRET_KEY', default='django-insecure-2*i07ttf&sxye5ut1_0+ia)!39n#==oa#*f3#!hsgc9#xs-_$w')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
 
 
 # Application definition
@@ -45,14 +52,28 @@ INSTALLED_APPS = [
 ]
 
 # --- Firebase Admin SDK -------------------------------------------------------
-# Path to the service-account JSON key downloaded from Firebase Console.
-FIREBASE_CREDENTIALS_PATH = BASE_DIR / "firebasekey.json"
-# Your Firebase Realtime Database URL (find it in Firebase Console -> Realtime Database)
-FIREBASE_DATABASE_URL = "https://cg2271-rtos-default-rtdb.asia-southeast1.firebasedatabase.app"
+# In production, set FIREBASE_CREDENTIALS_B64 to the base64-encoded contents of
+# your firebasekey.json (run: base64 -w 0 main/firebasekey.json).
+# Locally, the file path is used as a fallback.
+_firebase_creds_b64 = config('FIREBASE_CREDENTIALS_B64', default=None)
+if _firebase_creds_b64:
+    _creds_json = base64.b64decode(_firebase_creds_b64).decode()
+    _tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.json', mode='w')
+    _tmp.write(_creds_json)
+    _tmp.close()
+    FIREBASE_CREDENTIALS_PATH = _tmp.name
+else:
+    FIREBASE_CREDENTIALS_PATH = BASE_DIR / "firebasekey.json"
+
+FIREBASE_DATABASE_URL = config(
+    'FIREBASE_DATABASE_URL',
+    default='https://cg2271-rtos-default-rtdb.asia-southeast1.firebasedatabase.app'
+)
 # ------------------------------------------------------------------------------
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -84,12 +105,14 @@ WSGI_APPLICATION = "main.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
+# In production, set DATABASE_URL env var (Render provides this automatically).
+# Falls back to SQLite for local development.
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    "default": dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600,
+    )
 }
 
 
@@ -128,3 +151,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
