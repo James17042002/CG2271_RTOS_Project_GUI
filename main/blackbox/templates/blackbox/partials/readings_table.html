@@ -5,20 +5,22 @@
         <td>{{ reading.temperature }}&deg;C</td>
         <td>{{ reading.humidity }}%</td>
         <td>{{ reading.light_level }}</td>
+        <td>{{ reading.latitude }}</td>
+        <td>{{ reading.longitude }}</td>
         <td><span class="badge bg-light text-dark">{{ reading.event_status|default:"Normal" }}</span></td>
     </tr>
     {% endfor %}
 {% else %}
     {% if active_run %}
     <tr>
-        <td colspan="5" class="text-center py-4 text-muted">
+        <td colspan="7" class="text-center py-4 text-muted">
             <div class="spinner-border spinner-border-sm text-primary me-2"></div>
             Waiting for mission data...
         </td>
     </tr>
     {% else %}
     <tr>
-        <td colspan="5" class="text-center py-4 text-muted">No active run</td>
+        <td colspan="7" class="text-center py-4 text-muted">No active run</td>
     </tr>
     {% endif %}
 {% endif %}

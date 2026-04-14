@@ -21,6 +21,6 @@ class RunAdmin(admin.ModelAdmin):
 
 @admin.register(SensorReading)
 class SensorReadingAdmin(admin.ModelAdmin):
-    list_display = ("id", "timestamp", "temperature", "humidity", "light_level", "event_status")
+    list_display = ("id", "timestamp", "temperature", "humidity", "light_level", "latitude", "longitude", "event_status")
     list_filter = ("timestamp", "run", "event_status")
     search_fields = ("event_status",)

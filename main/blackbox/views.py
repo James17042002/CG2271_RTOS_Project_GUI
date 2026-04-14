@@ -62,7 +62,7 @@ def start_run_page(request):
     return render(request, "blackbox/start_run.html", {"active_run": active_run})
 
 
-from .firebase_utils import sync_active_run_status
+from .firebase_utils import sync_active_run_status, sync_run_config
 
 
 def toggle_run(request):
@@ -81,7 +81,26 @@ def toggle_run(request):
         else:
             # Start a new run
             object_name = request.POST.get("object_name", "Unnamed Run")
-            Run.objects.create(object=object_name, is_active=True)
+            
+            # Extract thresholds with defaults
+            temp_threshold = request.POST.get("temp_threshold")
+            humidity_threshold = request.POST.get("humidity_threshold")
+            light_threshold = request.POST.get("light_threshold")
+            
+            temp_threshold = float(temp_threshold) if temp_threshold else 50.0
+            humidity_threshold = float(humidity_threshold) if humidity_threshold else 90.0
+            light_threshold = float(light_threshold) if light_threshold else 400.0
+            
+            new_run = Run.objects.create(
+                object=object_name, 
+                is_active=True,
+                temp_threshold=temp_threshold,
+                humidity_threshold=humidity_threshold,
+                light_threshold=light_threshold
+            )
+            
+            # Sync the run configuration to Firebase
+            sync_run_config(new_run)
         
         # Sync the global 'Active_Run' status to Firebase
         sync_active_run_status()

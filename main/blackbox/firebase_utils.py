@@ -29,3 +29,20 @@ def sync_active_run_status():
     db.reference('Active_Run').set(has_active_run)
     
     return has_active_run
+
+def sync_run_config(run):
+    """
+    Synchronizes the thresholds of a specific run to the 'run_config' node in Firebase.
+    """
+    init_firebase()
+    
+    config_data = {
+        'temp_threshold': run.temp_threshold,
+        'humidity_threshold': run.humidity_threshold,
+        'light_threshold': run.light_threshold,
+    }
+    
+    # Update the Firebase run_config node
+    db.reference('run_config').set(config_data)
+    
+    return config_data

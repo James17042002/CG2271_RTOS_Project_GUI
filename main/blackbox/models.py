@@ -11,6 +11,10 @@ class Run(models.Model):
     started_at = models.DateTimeField(auto_now_add=True)
     ended_at = models.DateTimeField(null=True, blank=True)
 
+    temp_threshold = models.FloatField(default=0.0)
+    humidity_threshold = models.FloatField(default=0.0)
+    light_threshold = models.FloatField(default=0.0)
+
     def __str__(self):
         return f"Run #{self.id} - {self.object}"
 
