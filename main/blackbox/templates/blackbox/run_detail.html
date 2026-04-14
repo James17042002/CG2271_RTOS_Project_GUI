@@ -29,39 +29,56 @@
     </div>
 </div>
 
-<div class="row g-4 mb-5">
-    <!-- Statistics Cards -->
-    <div class="col-md-4">
-        <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body py-4">
-                <div class="text-primary mb-3">
-                    <i class="bi bi-thermometer-half fs-1"></i>
-                </div>
-                <h6 class="text-muted text-uppercase small fw-bold">Avg Temperature</h6>
-                <h2 class="display-6 fw-bold mb-0">{{ stats.avg_temp|default:0|floatformat:1 }}&deg;C</h2>
-            </div>
-        </div>
+<div class="card border-0 shadow-sm mb-5">
+    <div class="card-header bg-white border-0 py-3">
+        <h5 class="mb-0">Run Summary</h5>
     </div>
-    <div class="col-md-4">
-        <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body py-4">
-                <div class="text-info mb-3">
-                    <i class="bi bi-droplets fs-1"></i>
-                </div>
-                <h6 class="text-muted text-uppercase small fw-bold">Avg Humidity</h6>
-                <h2 class="display-6 fw-bold mb-0">{{ stats.avg_hum|default:0|floatformat:1 }}%</h2>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body py-4">
-                <div class="text-warning mb-3">
-                    <i class="bi bi-brightness-high fs-1"></i>
-                </div>
-                <h6 class="text-muted text-uppercase small fw-bold">Avg Light Level</h6>
-                <h2 class="display-6 fw-bold mb-0">{{ stats.avg_light|default:0|floatformat:0 }}</h2>
-            </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-bordered mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                        <th>Threshold / Config</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Session Timing</strong></td>
+                        <td>
+                            Started: {{ run.started_at|date:"M d, Y H:i" }}<br>
+                            Ended: {{ run.ended_at|date:"M d, Y H:i"|default:"Active" }}
+                        </td>
+                        <td class="text-muted">N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Average Temperature</strong></td>
+                        <td class="fw-bold">{{ stats.avg_temp|default:0|floatformat:1 }}&deg;C</td>
+                        <td>Threshold: {{ run.temp_threshold }}&deg;C</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Average Humidity</strong></td>
+                        <td class="fw-bold">{{ stats.avg_hum|default:0|floatformat:1 }}%</td>
+                        <td>Threshold: {{ run.humidity_threshold }}%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Average Light Level</strong></td>
+                        <td class="fw-bold">{{ stats.avg_light|default:0|floatformat:0 }}</td>
+                        <td>Threshold: {{ run.light_threshold }}</td>
+                    </tr>
+                    <tr class="table-danger-subtle">
+                        <td><strong>Total Shock Events</strong></td>
+                        <td class="fw-bold">{{ run.shock_count }}</td>
+                        <td class="text-muted">Detected by MCXC444</td>
+                    </tr>
+                    <tr class="table-danger-subtle">
+                        <td><strong>Total Box Openings</strong></td>
+                        <td class="fw-bold">{{ run.box_open_count }}</td>
+                        <td class="text-muted">Detected by Hall Sensor</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

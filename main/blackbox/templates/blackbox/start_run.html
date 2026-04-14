@@ -48,6 +48,14 @@
                 <div class="spinner-grow spinner-grow-sm text-info me-3" role="status"></div>
                 <strong>BlackBox Active: Run #{{ active_run.id }} - {{ active_run.object }}</strong>
             </div>
+            <div class="mt-2 d-flex gap-3">
+                <span class="badge bg-light text-dark border shadow-sm">
+                    <i class="bi bi-lightning-fill text-warning me-1"></i> Shocks: {{ active_run.shock_count }}
+                </span>
+                <span class="badge bg-light text-dark border shadow-sm">
+                    <i class="bi bi-door-open-fill text-primary me-1"></i> Box Opens: {{ active_run.box_open_count }}
+                </span>
+            </div>
             <small class="text-muted d-block mt-2">Started at: {{ active_run.started_at|date:"M d, Y H:i" }}</small>
         </div>
         {% endif %}

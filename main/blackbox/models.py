@@ -15,6 +15,9 @@ class Run(models.Model):
     humidity_threshold = models.FloatField(default=0.0)
     light_threshold = models.FloatField(default=0.0)
 
+    shock_count = models.IntegerField(default=0)
+    box_open_count = models.IntegerField(default=0)
+
     def __str__(self):
         return f"Run #{self.id} - {self.object}"
 

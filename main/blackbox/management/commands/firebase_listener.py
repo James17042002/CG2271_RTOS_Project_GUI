@@ -123,6 +123,23 @@ class Command(BaseCommand):
                         f"GPS=({reading.latitude}, {reading.longitude}) "
                         f"-> Run: {active_run.id if active_run else 'None'}"
                     )
+                    
+                    # Update aggregate counters on the Run object
+                    if active_run:
+                        shocks = payload.get("shocks")
+                        box_opens = payload.get("box_opens")
+                        
+                        updated = False
+                        if shocks is not None:
+                            active_run.shock_count = shocks
+                            updated = True
+                        if box_opens is not None:
+                            active_run.box_open_count = box_opens
+                            updated = True
+                            
+                        if updated:
+                            active_run.save()
+                            self.stdout.write(f"   [RUN UPDATE] Shocks: {active_run.shock_count}, Box Opens: {active_run.box_open_count}")
 
         return listener_callback
 
