@@ -11,7 +11,7 @@ class RunTable(tables.Table):
     class Meta:
         model = Run
         template_name = "django_tables2/bootstrap5.html"
-        fields = ("id", "object", "is_active", "started_at", "ended_at")
+        fields = ("id", "object", "is_active", "started_at", "temp_violations", "humidity_violations", "light_violations")
         attrs = {"class": "table table-hover shadow-sm rounded"}
 
     def render_details(self, record):

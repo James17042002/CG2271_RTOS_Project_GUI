@@ -31,10 +31,14 @@ def run_detail(request, pk):
     readings = SensorReading.objects.filter(run=run).order_by("timestamp")
     
     # Calculate Averages
+    from django.db.models import Count, Q
     stats = readings.aggregate(
         avg_temp=Avg("temperature"),
         avg_hum=Avg("humidity"),
-        avg_light=Avg("light_level")
+        avg_light=Avg("light_level"),
+        temp_violations=Count("id", filter=Q(temperature__gt=run.temp_threshold)),
+        hum_violations=Count("id", filter=Q(humidity__gt=run.humidity_threshold)),
+        light_violations=Count("id", filter=Q(light_level__gt=run.light_threshold))
     )
     
     # Prepare data for Chart.js and Leaflet

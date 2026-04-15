@@ -21,6 +21,18 @@ class Run(models.Model):
     def __str__(self):
         return f"Run #{self.id} - {self.object}"
 
+    @property
+    def temp_violations(self):
+        return self.readings.filter(temperature__gt=self.temp_threshold).count()
+
+    @property
+    def humidity_violations(self):
+        return self.readings.filter(humidity__gt=self.humidity_threshold).count()
+
+    @property
+    def light_violations(self):
+        return self.readings.filter(light_level__gt=self.light_threshold).count()
+
 
 class SensorReading(models.Model):
     """

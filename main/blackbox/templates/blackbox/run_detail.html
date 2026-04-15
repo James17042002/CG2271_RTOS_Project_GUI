@@ -54,17 +54,35 @@
                     </tr>
                     <tr>
                         <td><strong>Average Temperature</strong></td>
-                        <td class="fw-bold">{{ stats.avg_temp|default:0|floatformat:1 }}&deg;C</td>
+                        <td class="fw-bold">
+                            {{ stats.avg_temp|default:0|floatformat:1 }}&deg;C
+                            <span
+                                class="ms-2 badge {% if stats.temp_violations > 0 %}bg-danger{% else %}bg-success{% endif %}">
+                                {{ stats.temp_violations }} Threshold Violations
+                            </span>
+                        </td>
                         <td>Threshold: {{ run.temp_threshold }}&deg;C</td>
                     </tr>
                     <tr>
                         <td><strong>Average Humidity</strong></td>
-                        <td class="fw-bold">{{ stats.avg_hum|default:0|floatformat:1 }}%</td>
+                        <td class="fw-bold">
+                            {{ stats.avg_hum|default:0|floatformat:1 }}%
+                            <span
+                                class="ms-2 badge {% if stats.hum_violations > 0 %}bg-danger{% else %}bg-success{% endif %}">
+                                {{ stats.hum_violations }} Threshold Violations
+                            </span>
+                        </td>
                         <td>Threshold: {{ run.humidity_threshold }}%</td>
                     </tr>
                     <tr>
                         <td><strong>Average Light Level</strong></td>
-                        <td class="fw-bold">{{ stats.avg_light|default:0|floatformat:0 }}</td>
+                        <td class="fw-bold">
+                            {{ stats.avg_light|default:0|floatformat:0 }}
+                            <span
+                                class="ms-2 badge {% if stats.light_violations > 0 %}bg-danger{% else %}bg-success{% endif %}">
+                                {{ stats.light_violations }} Threshold Violations
+                            </span>
+                        </td>
                         <td>Threshold: {{ run.light_threshold }}</td>
                     </tr>
                     <tr class="table-danger-subtle">
