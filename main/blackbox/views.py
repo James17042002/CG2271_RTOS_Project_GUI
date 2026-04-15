@@ -113,15 +113,19 @@ def toggle_run(request):
 
 
 def live_readings(request):
-    """
-    HTMX endpoint: Returns the latest sensor readings for the active run.
-    """
     active_run = Run.objects.filter(is_active=True).first()
     readings = []
     if active_run:
+        active_run.refresh_from_db()  # Get latest counter values
         readings = SensorReading.objects.filter(run=active_run).order_by("-timestamp")[:10]
     
     return render(request, "blackbox/partials/readings_table.html", {
         "readings": readings,
         "active_run": active_run
     })
+
+def live_run_status(request):
+    active_run = Run.objects.filter(is_active=True).first()
+    if active_run:
+        active_run.refresh_from_db()
+    return render(request, "blackbox/partials/run_status.html", {"active_run": active_run})

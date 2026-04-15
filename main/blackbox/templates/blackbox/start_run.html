@@ -15,10 +15,10 @@
                         <input type="text" name="object_name" id="object_name" class="form-control"
                             value="{{ active_run.object|default:'' }}" {% if active_run %}disabled{% endif %} required>
                     </div>
-                    
+
                     <div class="row mb-4">
                         <div class="col-4">
-                            <label for="temp_threshold" class="form-label small">Temp (°C)</label>
+                            <label for="temp_threshold" class="form-label small">Temp (&deg;C)</label>
                             <input type="number" step="0.1" name="temp_threshold" id="temp_threshold" class="form-control"
                                 placeholder="50.0" value="{{ active_run.temp_threshold|default:'' }}" {% if active_run %}disabled{% endif %}>
                         </div>
@@ -43,17 +43,20 @@
         </div>
 
         {% if active_run %}
-        <div class="alert alert-info shadow-sm">
+        <div class="alert alert-info shadow-sm"
+             hx-get="{% url 'live_run_status' %}"
+             hx-trigger="every 5s"
+             hx-swap="innerHTML">
             <div class="d-flex align-items-center">
                 <div class="spinner-grow spinner-grow-sm text-info me-3" role="status"></div>
                 <strong>BlackBox Active: Run #{{ active_run.id }} - {{ active_run.object }}</strong>
             </div>
             <div class="mt-2 d-flex gap-3">
                 <span class="badge bg-light text-dark border shadow-sm">
-                    <i class="bi bi-lightning-fill text-warning me-1"></i> Shocks: {{ active_run.shock_count }}
+                    Shocks: {{ active_run.shock_count }}
                 </span>
                 <span class="badge bg-light text-dark border shadow-sm">
-                    <i class="bi bi-door-open-fill text-primary me-1"></i> Box Opens: {{ active_run.box_open_count }}
+                    Box Opens: {{ active_run.box_open_count }}
                 </span>
             </div>
             <small class="text-muted d-block mt-2">Started at: {{ active_run.started_at|date:"M d, Y H:i" }}</small>
@@ -88,11 +91,10 @@
                             {% if not active_run %}
                             <tr>
                                 <td colspan="7" class="text-center py-5 text-muted">
-                                    <i class="bi bi-info-circle me-2"></i> No active run
+                                    No active run
                                 </td>
                             </tr>
                             {% else %}
-                            <!-- Polling will populate this -->
                             <tr>
                                 <td colspan="7" class="text-center py-5">
                                     <div class="spinner-border spinner-border-sm text-primary me-2"></div>

@@ -1,3 +1,18 @@
+{% if active_run %}
+<tr class="table-info">
+    <td colspan="7" class="py-2">
+        <div class="d-flex align-items-center gap-3">
+            <strong>Live Counters</strong>
+            <span class="badge bg-warning text-dark shadow-sm">
+                Shocks: {{ active_run.shock_count }}
+            </span>
+            <span class="badge bg-primary text-white shadow-sm">
+                Box Opens: {{ active_run.box_open_count }}
+            </span>
+        </div>
+    </td>
+</tr>
+{% endif %}
 {% if readings %}
     {% for reading in readings %}
     <tr>

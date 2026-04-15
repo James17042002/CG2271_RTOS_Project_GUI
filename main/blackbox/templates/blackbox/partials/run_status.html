@@ -1,0 +1,17 @@
+{% if active_run %}
+<div class="d-flex align-items-center">
+    <div class="spinner-grow spinner-grow-sm text-info me-3" role="status"></div>
+    <strong>BlackBox Active: Run #{{ active_run.id }} - {{ active_run.object }}</strong>
+</div>
+<div class="mt-2 d-flex gap-3">
+    <span class="badge bg-light text-dark border shadow-sm">
+        Shocks: {{ active_run.shock_count }}
+    </span>
+    <span class="badge bg-light text-dark border shadow-sm">
+        Box Opens: {{ active_run.box_open_count }}
+    </span>
+</div>
+<small class="text-muted d-block mt-2">Started at: {{ active_run.started_at|date:"M d, Y H:i" }}</small>
+{% else %}
+<div class="text-muted">No active run</div>
+{% endif %}

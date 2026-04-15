@@ -49,6 +49,9 @@ class SensorReading(models.Model):
     light_level = models.FloatField(default=0.0)
     latitude = models.FloatField(default=0.0)
     longitude = models.FloatField(default=0.0)
+    temp_exceeded = models.IntegerField(default=0)
+    humi_exceeded = models.IntegerField(default=0)
+    light_exceeded = models.IntegerField(default=0)
 
     def __str__(self):
         return (

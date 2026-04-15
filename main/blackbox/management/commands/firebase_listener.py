@@ -85,6 +85,9 @@ class Command(BaseCommand):
                         "light_level": payload.get("light_level", 0.0),
                         "latitude": payload.get("latitude", 0.0),
                         "longitude": payload.get("longitude", 0.0),
+                        "temp_exceeded": payload.get("temp_exceeded", 0),
+                        "humi_exceeded": payload.get("humi_exceeded", 0),
+                        "light_exceeded": payload.get("light_exceeded", 0),
                     }
                 )
                 
