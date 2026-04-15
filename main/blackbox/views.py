@@ -93,7 +93,7 @@ def toggle_run(request):
             
             temp_threshold = float(temp_threshold) if temp_threshold else 50.0
             humidity_threshold = float(humidity_threshold) if humidity_threshold else 90.0
-            light_threshold = float(light_threshold) if light_threshold else 400.0
+            light_threshold = float(light_threshold) if light_threshold else 3000.0
             
             new_run = Run.objects.create(
                 object=object_name, 
