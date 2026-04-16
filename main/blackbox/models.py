@@ -23,15 +23,18 @@ class Run(models.Model):
 
     @property
     def temp_violations(self):
-        return self.readings.filter(temperature__gt=self.temp_threshold).count()
+        last = self.readings.order_by('-timestamp').first()
+        return last.temp_exceeded if last else 0
 
     @property
     def humidity_violations(self):
-        return self.readings.filter(humidity__gt=self.humidity_threshold).count()
+        last = self.readings.order_by('-timestamp').first()
+        return last.humi_exceeded if last else 0
 
     @property
     def light_violations(self):
-        return self.readings.filter(light_level__gt=self.light_threshold).count()
+        last = self.readings.order_by('-timestamp').first()
+        return last.light_exceeded if last else 0
 
 
 class SensorReading(models.Model):
