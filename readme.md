@@ -1,6 +1,6 @@
-# Django Server (CG2271 Blackbox)
+# BlackBox (GUI)
 
-This directory contains the Django backend for the CG2271 Final Project. It serves as the central hub for the embedded "Blackbox" system, managing recording sessions ("Runs"), synchronizing configurations with the ESP32 via Firebase, and providing a real-time web dashboard for tracking telemetry.
+This directory contains the Django backend server for the Blackbox. It serves as the central hub for the embedded "Blackbox" system, managing recording sessions ("Runs"), synchronizing configurations with the ESP32 via Firebase, and providing a real-time web dashboard for tracking telemetry.
 
 ## System Architecture Overview
 
